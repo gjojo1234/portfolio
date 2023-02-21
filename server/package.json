@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build-server": "npm init",
+    "build-server": "npm i",
     "server": "nodemon server.js"
   },
   "keywords": [],
