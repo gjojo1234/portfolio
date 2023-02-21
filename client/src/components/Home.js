@@ -27,12 +27,7 @@ const Home = () => {
   };
   const getFeedback = async () => {
     try {
-      const { data } = await axios.get(`${BASE_URL}/feedback`, {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": `${BASE_URL}/feedback`,
-        },
-      });
+      const { data } = await axios.get(`${BASE_URL}/feedback`);
 
       const { feedBacks } = data;
       setFeedbacks(feedBacks);
