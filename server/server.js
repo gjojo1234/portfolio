@@ -15,7 +15,12 @@ dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://jozefgensor-portfolio.onrender.com",
+  })
+);
 app.use(express.json());
 
 app.use(express.static(path.resolve(__dirname, "./client/build")));
