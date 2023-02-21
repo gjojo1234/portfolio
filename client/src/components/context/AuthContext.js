@@ -1,6 +1,7 @@
 import React, { useReducer, useContext } from "react";
 import reducer from "./reducer.js";
 import axios from "axios";
+import { BASE_URL } from "../access/accessToBackend.js";
 
 const authContext = React.createContext();
 const user = localStorage.getItem("user");
@@ -21,7 +22,10 @@ const AuthProvider = ({ children }) => {
   };
   const registerUser = async (currentUser) => {
     try {
-      const response = await axios.post("/auth/register", currentUser);
+      const response = await axios.post(
+        `${BASE_URL}/auth/register`,
+        currentUser
+      );
 
       const { user, token } = response.data;
       dispatch({
@@ -36,7 +40,7 @@ const AuthProvider = ({ children }) => {
   };
   const loginUser = async (currentUser) => {
     try {
-      const { data } = await axios.post("/auth/login", currentUser);
+      const { data } = await axios.post(`${BASE_URL}/auth/login`, currentUser);
 
       const { user, token } = data;
       dispatch({
@@ -51,7 +55,7 @@ const AuthProvider = ({ children }) => {
   };
   const createFeedback = async (currentFeedback) => {
     try {
-      await axios.post("/feedback", currentFeedback);
+      await axios.post(`${BASE_URL}/feedback`, currentFeedback);
     } catch (error) {}
   };
 
