@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Wrapper from "../wrappers/navbarWrapper.js";
 import { useAppContext } from "./context/AuthContext";
 import LoginIcon from "./LoginIcon.js";
 
@@ -36,21 +37,23 @@ const Navbar = () => {
   }, [token]);
 
   return (
-    <div className="navbar">
-      <ul className="nav-container">
-        {navlist.map((item) => {
-          const { id, name, link } = item;
-          return (
-            <li key={id} className="listItem">
-              <Link to={link} className="linkItem">
-                {name}
-              </Link>
-            </li>
-          );
-        })}
-        {token && <LoginIcon />}
-      </ul>
-    </div>
+    <Wrapper>
+      <div className="navbar">
+        <ul className="nav-container">
+          {navlist.map((item) => {
+            const { id, name, link } = item;
+            return (
+              <li key={id} className="listItem">
+                <Link to={link} className="linkItem">
+                  {name}
+                </Link>
+              </li>
+            );
+          })}
+          {token && <LoginIcon />}
+        </ul>
+      </div>
+    </Wrapper>
   );
 };
 

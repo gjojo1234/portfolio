@@ -1,3 +1,5 @@
+import Wrapper from "../wrappers/skillsWrapper.js";
+
 const Skills = () => {
   const skills = [
     { id: 1, name: "Javascript", icon: "./img/javascript.svg" },
@@ -10,26 +12,28 @@ const Skills = () => {
   ];
 
   return (
-    <div className="skills">
-      <div className="skill-items">
-        {skills.map((item) => {
-          const { id, name, icon } = item;
-          return (
-            <div className="componentSkill" key={id}>
-              <img src={icon} className="componentImg" alt="icon"></img>
-              <h1>{name}</h1>
-            </div>
-          );
-        })}
+    <Wrapper>
+      <div className="skills">
+        <div className="skill-items">
+          {skills.map((item) => {
+            const { id, name, icon } = item;
+            return (
+              <div className="componentSkill" key={id}>
+                <img src={icon} className="componentImg" alt="icon"></img>
+                <h1>{name}</h1>
+              </div>
+            );
+          })}
+        </div>
+        <div className="skill-image">
+          <img
+            src="./img/programming.svg"
+            alt="web-programming"
+            className="img-prog"
+          />
+        </div>
       </div>
-      <div className="skill-image">
-        <img
-          src="./img/programming.svg"
-          alt="web-programming"
-          className="img-prog"
-        />
-      </div>
-    </div>
+    </Wrapper>
   );
 };
 
