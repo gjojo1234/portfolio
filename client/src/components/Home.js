@@ -30,6 +30,9 @@ const Home = () => {
       const { data } = await axios.get(`${BASE_URL}/feedback`, {
         headers: {
           "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "*",
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
         },
       });
 
