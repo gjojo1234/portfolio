@@ -29,6 +29,7 @@ const Home = () => {
     try {
       const { data } = await axios.get(`${BASE_URL}/feedback`, {
         headers: {
+          "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Headers": "*",
           "Access-Control-Allow-Credentials": "true",
