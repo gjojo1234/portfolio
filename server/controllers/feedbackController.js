@@ -3,7 +3,7 @@ import { StatusCodes } from "http-status-codes";
 
 const getAllFeedback = async (req, res) => {
   const feedBacks = await Feedback.find({});
-
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.status(StatusCodes.OK).json({ feedBacks });
 };
 const createFeedback = async (req, res) => {
