@@ -17,7 +17,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const options = {
   credentials: true,
-  origin: ["https://jozefgensor-portfolio.onrender.com"],
+  headers: { "Access-Control-Allow-Origin": "*" },
 };
 
 app.use(cors(options));
