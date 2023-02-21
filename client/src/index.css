@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+.navbar {
+  margin-top: 0;
+  padding-top: 0;
+  height: 3rem;
+  background: linear-gradient(#101010, #121212);
+  box-shadow: 0 1rem 0.1rem #202020;
+}
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.listItem,
+.logicon {
+  list-style: none;
+  padding: 0.5rem 2rem 1rem 2rem;
+  height: 3rem;
+  text-transform: capitalize;
+}
+.listItem:hover {
+  background: #404040;
+  cursor: pointer;
+}
+.linkItem,
+.loguser {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+}
+.loguser {
+  color: greenyellow;
+}
+.loguser::before {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+  background-color: greenyellow;
+}
+.loginIconBtn {
+  background-color: transparent;
+  color: yellowgreen;
+  border: none;
+  margin-left: 0.75rem;
+}
+.loginIconBtn:hover {
+  cursor: pointer;
+}
+.active {
+  color: rgb(222, 222, 74);
+}
+.deactive {
+  color: white;
+}
+.home,
+.skills {
+  background: linear-gradient(#151515, #606060);
+  min-height: calc(100vh - 3rem);
+}
+
+.contact {
+  min-height: calc(100vh - 3rem);
+  background: linear-gradient(#151515, #606060);
+}
+
+.homeSection1,
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.homeArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 5rem;
+}
+.homeArticle h2 {
+  font-size: 2.5rem;
+  color: rgb(191, 212, 237);
+}
+.homeTitle {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  color: #e4ecf1;
+}
+.span {
+  color: yellow;
+}
+.btns {
+  display: flex;
+  justify-content: flex-start;
+}
+.btn {
+  color: whitesmoke;
+  font-size: 1.25em;
+  border: 0.5px solid #e4ecf1;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  margin-right: 1em;
+  padding: 0.2em 1.5em 0.4em 1.5em;
+  text-decoration: none;
+  background-color: #696969;
+}
+.btn:hover {
+  color: rgb(222, 222, 74);
+  background-color: #404040;
+  cursor: pointer;
+}
+.imgHome {
+  margin: 7vh auto;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+.homeSection2 {
+  margin-left: 5rem;
+}
+.homeTitle2 {
+  font-size: 3rem;
+  color: yellow;
+  text-transform: capitalize;
+  text-decoration: underline;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+.project1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.projectArticle {
+  padding-left: 2rem;
+}
+.projectArticle h1 {
+  color: rgb(222, 222, 74);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.projectArticle p {
+  font-size: 1.25rem;
+  color: white;
+}
+.projectImage {
+  width: 35rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+}
+.projectImage:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.homeSection3 {
+  margin-left: 5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.addFeedback {
+  margin-top: 2rem;
+}
+.addFeedback,
+.form-feedback {
+  margin-right: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.titleFeedback {
+  font-size: 1.75rem;
+  padding-bottom: 1rem;
+  color: yellowgreen;
+  text-transform: capitalize;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: yellow;
+}
+label {
+  padding-bottom: 0.5rem;
+}
+.allFeedback {
+  margin-top: 2rem;
+  max-width: 30rem;
+  height: auto;
+}
+.feedbackItem {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 1rem #151515;
+  padding: 1rem;
+  background-color: #505050;
+}
+.feedbackItem:nth-child(even) {
+  background-color: #404040;
+}
+.feedbackItem h1 {
+  color: rgb(187, 222, 246);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.feedbackItem p {
+  color: wheat;
+}
+.componentSkill {
+  width: 60%;
+  height: 8rem;
+  margin: 1.5%;
+  background: #151515;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 10px #181818;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.componentImg {
+  padding-right: 1rem;
+}
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skill-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+.img-prog {
+  max-width: 50vw;
+  max-height: 60vh;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactTitle {
+  display: block;
+  padding-top: 5rem;
+  font-size: 3rem;
+  color: #e4ecf1;
+  text-align: center;
+  text-transform: capitalize;
+}
+.contactArticle {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  text-align: center;
+}
+.contactArticle p,
+.contactArticle a {
+  display: block;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  color: #909090;
+}
+.contactArticle a:hover {
+  cursor: pointer;
+  color: rgb(222, 222, 74);
+}
+
+@media screen and (max-width: 1050px) {
+  .componentSkill {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .project1 {
+    display: block;
+  }
+  .projectArticle {
+    padding-left: 0;
+  }
+  .projectImage {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .imgHome {
+    margin-top: 1rem;
+    height: 30vh;
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .homeSection1 {
+    grid-template-columns: 1fr;
+  }
+
+  .componentSkill {
+    width: 95%;
+  }
+  .listItem,
+  .logicon {
+    padding: 0.5rem 0.3rem 1rem 0.34rem;
+  }
+}
