@@ -29,7 +29,7 @@ const Home = () => {
     try {
       const { data } = await axios.get(`${BASE_URL}/feedback`, {
         headers: {
-          "Content-Type": "application/json;charset=UTF-8",
+          "Content-Type": "application/json",
           "Access-Control-Allow-Origin": `${BASE_URL}/feedback`,
         },
       });
