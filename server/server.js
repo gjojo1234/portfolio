@@ -15,12 +15,7 @@ dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const options = {
-  credentials: true,
-  headers: { "Access-Control-Allow-Origin": "*" },
-};
-
-app.use(cors(options));
+app.use(cors());
 app.use(express.json());
 
 app.use(express.static(path.resolve(__dirname, "./client/build")));
