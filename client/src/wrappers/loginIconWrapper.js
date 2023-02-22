@@ -5,14 +5,10 @@ const Wrapper = styled.div`
     list-style: none;
     padding: 0.5rem 2rem 1rem 2rem;
     height: 3rem;
-    text-transform: capitalize;
   }
   .loguser {
     font-size: 1.4rem;
     text-decoration: none;
-    color: white;
-  }
-  .loguser {
     color: greenyellow;
   }
   .loguser::before {

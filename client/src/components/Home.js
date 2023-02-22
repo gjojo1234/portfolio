@@ -1,30 +1,17 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useAppContext } from "./context/AuthContext";
+
 import axios from "axios";
 import { BASE_URL } from "./access/accessToBackend.js";
 import Wrapper from "../wrappers/homeWrapper.js";
+import FormFeedback from "./FormFeedback.js";
+import { useAppContext } from "./context/AuthContext.js";
+import FormNoUser from "./FormNoUser.js";
 
 const Home = () => {
-  const initialState = {
-    name: "",
-    feedback: "",
-  };
-  const [values, setValues] = useState(initialState);
   const [feedbacks, setFeedbacks] = useState([]);
-  const { createFeedback } = useAppContext();
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-  const onSubmit = (e) => {
-    const { name, feedback } = values;
-    const currentFeedback = { name, feedback };
-    createFeedback(currentFeedback);
-    setValues({
-      name: "",
-      feedback: "",
-    });
-  };
+  const { user } = useAppContext();
+
   const getFeedback = async () => {
     try {
       const { data } = await axios.get(`${BASE_URL}/feedback`);
@@ -83,33 +70,7 @@ const Home = () => {
         <section className="homeSection3">
           <div className="addFeedback">
             <h1 className="titleFeedback">add feedback</h1>
-            <form onSubmit={onSubmit} className="form-feedback">
-              <div className="form-row">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={values.name}
-                  onChange={handleChange}
-                  placeholder="Please your name..."
-                />
-              </div>
-              <div className="form-row">
-                <label htmlFor="feedback">Feedback</label>
-                <textarea
-                  id="feedbackArea"
-                  name="feedback"
-                  rows="5"
-                  cols="35"
-                  placeholder="Please create feedback...."
-                  value={values.feedback}
-                  onChange={handleChange}
-                ></textarea>
-              </div>
-              <button type="submit" className="btn">
-                Add feedback
-              </button>
-            </form>
+            {user ? <FormFeedback /> : <FormNoUser />}
           </div>
           <div className="allFeedback">
             <h1 className="titleFeedback">Feedbacks</h1>

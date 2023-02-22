@@ -77,7 +77,8 @@ const Wrapper = styled.section`
     font-size: 2.5rem;
     text-transform: capitalize;
   }
-  .projectArticle p {
+  .projectArticle p,
+  .addFeedback p {
     font-size: 1.25rem;
     color: white;
   }
@@ -101,8 +102,7 @@ const Wrapper = styled.section`
   .addFeedback {
     margin-top: 2rem;
   }
-  .addFeedback,
-  .form-feedback {
+  .addFeedback {
     margin-right: 10rem;
 
     display: flex;
@@ -116,17 +116,7 @@ const Wrapper = styled.section`
     color: yellowgreen;
     text-transform: capitalize;
   }
-  .form-row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 0.75rem;
-    font-size: 1.25rem;
-    color: yellow;
-  }
-  label {
-    padding-bottom: 0.5rem;
-  }
+
   .allFeedback {
     margin-top: 2rem;
     max-width: 30rem;
@@ -142,6 +132,7 @@ const Wrapper = styled.section`
   .feedbackItem:nth-child(even) {
     background-color: #404040;
   }
+
   .feedbackItem h1 {
     color: rgb(187, 222, 246);
     text-align: center;
@@ -150,6 +141,12 @@ const Wrapper = styled.section`
   .feedbackItem p {
     color: wheat;
   }
+  .loguser {
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: greenyellow;
+  }
+
   @media screen and (max-width: 960px) {
     .project1 {
       display: block;
@@ -172,6 +169,11 @@ const Wrapper = styled.section`
   @media screen and (max-width: 740px) {
     .homeSection1 {
       grid-template-columns: 1fr;
+    }
+    .imgHome {
+      margin-top: 1rem;
+      height: 15vh;
+      width: 30vw;
     }
   }
 `;
