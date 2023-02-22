@@ -25,6 +25,7 @@ const Home = () => {
       name: "",
       feedback: "",
     });
+    getFeedback();
   };
   const getFeedback = async () => {
     try {
