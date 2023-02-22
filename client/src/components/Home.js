@@ -17,7 +17,6 @@ const Home = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   const onSubmit = (e) => {
-    e.preventDefault();
     const { name, feedback } = values;
     const currentFeedback = { name, feedback };
     createFeedback(currentFeedback);
@@ -25,7 +24,6 @@ const Home = () => {
       name: "",
       feedback: "",
     });
-    getFeedback();
   };
   const getFeedback = async () => {
     try {
