@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  .home {
-    background: linear-gradient(#151515, #606060);
-    min-height: calc(100vh - 3rem);
-  }
   .homeSection1 {
+    background: linear-gradient(#151515, #505050);
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -55,22 +52,27 @@ const Wrapper = styled.section`
     border-radius: 50%;
   }
   .homeSection2 {
-    margin-left: 5rem;
+    background: linear-gradient(#353535, #454545);
+    padding-bottom: 3rem;
   }
   .homeTitle2 {
     font-size: 3rem;
+    font-family: cursive;
     color: yellow;
+    text-align: center;
     text-transform: capitalize;
-    text-decoration: underline;
+
     letter-spacing: 0.1em;
-    margin-bottom: 2rem;
+    padding: 3rem 0;
   }
   .project1 {
     display: flex;
     justify-content: flex-start;
+    padding-left: 5rem;
   }
   .projectArticle {
     padding-left: 2rem;
+    padding-bottom: 3rem;
   }
   .projectArticle h1 {
     color: rgb(222, 222, 74);
@@ -85,14 +87,14 @@ const Wrapper = styled.section`
   .projectImage {
     width: 35rem;
     height: 20rem;
-    margin-bottom: 2rem;
   }
   .projectImage:hover {
     cursor: pointer;
     transform: scale(1.03);
   }
   .homeSection3 {
-    margin-left: 5rem;
+    background: linear-gradient(#505050, #656565);
+    padding-left: 5rem;
     padding-bottom: 3rem;
     display: flex;
     flex-direction: row;
